@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Times New Roman', Times, serif;
+            overflow-x: hidden;
+        }
+
+
+
+
+
+        .header {
+            background-color: rgb(215, 224, 224);
+        }
+
+        button {
+            background-color: navy;
+            /* Green */
+            border: none;
+            color: white;
+            padding: 13px 28px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+        button {
+            background-color: navy;
+            color: white;
+            border: 2px solid navy;
+        }
+
+
+        #click {
+            float: right;
+            padding-top: 35px;
+            margin-right: 30px;
+        }
+
+
+
+        .footer {
+            background-color: #0099cc;
+            color: #ffffff;
+            text-align: center;
+            font-size: 20px;
+            padding: 15px;
+            margin-top: 55px;
+        }
+
+        #case {
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            border-radius: 25px;
+            padding-top: 24px;
+
+        }
+
+        h1 {
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            color: blue;
+            font-size: 50px;
+        }
+
+        /*<==========================================================*/
+        input[type=text],
+        select {
+            width: 400px;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=submit] {
+            width: 200px;
+            background-color: navy;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 600px) {
+
+
+            input[type=text] {
+                width: 380px;
+                height: 40px;
+                padding: 12px 20px;
+                margin: 8px 0;
+                box-sizing: border-box;
+            }
+
+            #Contact_Name {
+                width: 350px;
+                height: 40px;
+            }
+
+            #Email {
+                width: 350px;
+                height: 40px;
+            }
+
+            #Phone {
+                width: 350px;
+                height: 40px;
+            }
+
+            #Subject {
+                width: 350px;
+                height: 40px;
+            }
+
+            #Company {
+                width: 350px;
+                height: 40px;
+            }
+
+            .Status {
+                width: 300px;
+                height: 40px;
+            }
+
+            .Case_Reason {
+                width: 300px;
+                height: 40px;
+            }
+            .Description {
+                width: 300px;
+                height: 40px;
+            }
+        }
+       
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="header">
+            <img src="https://clutchco-static.s3.amazonaws.com/s3fs-public/logos/dhruv-soft-log_2.png?VersionId=hDz_.A7CoW1DsD5XgyORTXSsUyP1i0sQ"
+                style="width: 260px;height:120px;padding-top: 15px;padding-bottom: 15px;margin-left: 30px;">
+            <div id="click">
+                <a href="index.html" style="text-decoration:none;"><button type="button"> Home</button></a>
+                <a href="webtolead.html" style="text-decoration:none;"><button type="button">Web To Lead</button></a>
+                <a href="webtocase.html" style="text-decoration:none;"><button type="button">Web To Case</button></a>
+
+            </div>
+        </div>
+        <br>
+        <div id="case" class="tabcontent">
+            <div class="container-fluid">
+                <div class="row">
+
+                    <h1>Web To Case Form</h1>
+                    <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
+
+                        <input type=hidden name="orgid" value="00D5g00000KDrwF">
+                        <input type=hidden name="retURL" value="http://127.0.0.1:5501/Tasks/webtocase.html">
+                        <label for="name">Contact Name:&nbsp;</label><input id="name" maxlength="80" name="name"
+                            size="20" type="text" style="margin-right: 120px;" /><br>
+
+                        <label for="email">Email:&nbsp;&nbsp;</label><input id="email" maxlength="80" name="email"
+                            size="20" type="text" style="margin-right: 53px;" /><br>
+
+                        <label for="phone">Phone:&nbsp;&nbsp;</label><input id="phone" maxlength="40" name="phone"
+                            size="20" type="text" style="margin-right: 60px;" /><br>
+
+                        <label for="subject">Subject:&nbsp;&nbsp;</label><input id="subject" maxlength="80"
+                            name="subject" size="20" type="text" style="margin-right: 70px;" /><br>
+
+                        <label for="company">Company:&nbsp;&nbsp;</label><input id="company" maxlength="80"
+                            name="company" size="20" type="text" style="margin-right: 90px;" /><br>
+
+                        <label for="status">Status:&nbsp;&nbsp;</label><select id="status" name="status"
+                            style="margin-right: 62px;">
+                            <option value="">--None--</option>
+                            <option value="New">New</option>
+                            <option value="Working">Working</option>
+                            <option value="Escalated">Escalated</option>
+                            <option value="Closed">Closed</option>
+                        </select><br>
+
+
+                        <label for="reason">Case Reason:&nbsp;&nbsp;</label><select id="reason" name="reason"
+                            style="margin-right: 120px;">
+                            <option value="">--None--</option>
+                            <option value="Installation">Installation</option>
+                            <option value="Equipment Complexity">Equipment Complexity</option>
+                            <option value="Performance">Performance</option>
+                            <option value="Breakdown">Breakdown</option>
+                            <option value="Equipment Design">Equipment Design</option>
+                            <option value="Feedback">Feedback</option>
+                            <option value="Other">Other</option>
+                        </select><br>
+
+                        <label for="description">Description:&nbsp;&nbsp;</label><textarea name="description"
+                            style="margin-right: 110px; width: 400px;"></textarea><br>
+                        <input type="submit" name="submit">
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <b> @2022 Mahesh Mathe.**All Rights Reserved**</b>
+        </div>
+    </div>
+</body>
+
+</html>
